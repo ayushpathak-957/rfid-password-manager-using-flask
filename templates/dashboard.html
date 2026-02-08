@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Manager</h2>
+
+    <br>
+    <a href="/generate"><button>➕ Save New Password</button></a>
+    <br><br>
+    <a href="/view"><button>📄 View / Change Passwords</button></a>
+    <br><br>
+    <a href="/exit"><button class="secondary">🔒 Exit</button></a>
+
+    {% if success_message %}
+        <div class="success">{{ success_message }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>

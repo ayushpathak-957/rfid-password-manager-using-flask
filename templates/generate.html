@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Password</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h3>Generate Password</h3>
+
+    <form method="POST">
+        <label>Password Length</label>
+        <input type="number" name="length" required>
+
+        <label><input type="checkbox" name="types" value="lower"> Lowercase</label><br>
+        <label><input type="checkbox" name="types" value="upper"> Uppercase</label><br>
+        <label><input type="checkbox" name="types" value="number"> Numbers</label><br>
+        <label><input type="checkbox" name="types" value="special"> Special characters</label><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if password %}
+        <hr>
+        <p><b>Generated Password:</b></p>
+        <input type="text" value="{{ password }}" readonly>
+
+        <form action="/save" method="POST">
+            <label>Label</label>
+            <input name="label" required>
+            <input type="hidden" name="password" value="{{ password }}">
+            <button type="submit">Save Password</button>
+        </form>
+    {% endif %}
+
+    {% if success_message %}
+        <div class="success">{{ success_message }}</div>
+    {% endif %}
+
+    <br>
+    <a href="/dashboard" class="link">⬅ Return to Dashboard</a>
+</div>
+
+</body>
+</html>

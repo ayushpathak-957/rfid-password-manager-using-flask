@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Password</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h3>Edit Password</h3>
+
+    <p><b>Label:</b> {{ item[0] }}</p>
+
+    <form method="POST">
+        <label>New Password</label>
+        <input name="password" value="{{ item[1] }}" required>
+        <button type="submit">Update Password</button>
+    </form>
+
+    {% if success_message %}
+        <div class="success">{{ success_message }}</div>
+    {% endif %}
+
+    <br>
+    <a href="/dashboard" class="link">⬅ Return to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* ---------- GLOBAL ---------- */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+h2, h3 {
+    color: #2c3e50;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+button.secondary {
+    background-color: #777;
+}
+
+button.secondary:hover {
+    background-color: #555;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    text-decoration: none;
+}
+
+a.link {
+    color: #4a90e2;
+    font-weight: 500;
+}
+
+/* ---------- FORMS ---------- */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* ---------- SUCCESS / ERROR ---------- */
+.success {
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.error {
+    color: #c62828;
+    background: #fdecea;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f4f8;
+}
+
+tr:hover {
+    background-color: #f9fbfd;
+}
+
+.actions {
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RFID Scan</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    {% if status != "valid" %}
+    <meta http-equiv="refresh" content="2">
+    {% endif %}
+</head>
+<body>
+
+<div class="container">
+    {% if status == "waiting" %}
+        <h2>🔐 Scan your RFID card</h2>
+        <p>Please place your card near the reader.</p>
+
+    {% elif status == "invalid" %}
+        <h2>❌ Invalid RFID</h2>
+        <p class="error">This card is not authorized.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
